@@ -1,0 +1,7 @@
+C:\Users\vardo\source\repos\proy3\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\vardo\source\repos\proy3\model\bin\Debug\model.exe.config
+C:\Users\vardo\source\repos\proy3\model\bin\Debug\model.exe
+C:\Users\vardo\source\repos\proy3\model\bin\Debug\model.pdb
+C:\Users\vardo\source\repos\proy3\model\obj\Debug\model.exe
+C:\Users\vardo\source\repos\proy3\model\obj\Debug\model.pdb
+C:\Users\vardo\source\repos\proy3\model\obj\Debug\model.csprojAssemblyReference.cache
