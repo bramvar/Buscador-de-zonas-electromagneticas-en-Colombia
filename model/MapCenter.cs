@@ -39,6 +39,7 @@ namespace model
                     double longit = Convert.ToDouble(coll[1]);
                     String name = coll[2];
                     double valueZ = Convert.ToDouble(coll[6]);
+                    String city = coll[4];
 
                     Console.WriteLine(coll.Length + "\n" + lat + " " + longit + " " + name + " " + valueZ);
                     aux = new ZoneEM(name, lat, longit, valueZ);

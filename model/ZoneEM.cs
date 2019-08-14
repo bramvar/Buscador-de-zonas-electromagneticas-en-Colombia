@@ -9,20 +9,20 @@ namespace model
     public class ZoneEM
     {
         private String name;
+        private String city;
         private double longit;
         private double lat;
         private double measuredValueZoneEM;
+        
 
-        public ZoneEM(String name, double lat, double longit, double mvz)
+        public ZoneEM(String name, String city, double lat, double longit, double mvz)
         {
             this.name = name;
+            this.city = city;
             this.longit = longit;
             this.lat = lat;
             measuredValueZoneEM = mvz;
-            measuredValueZoneEM = mvz;
-            measuredValueZoneEM = mvz;
-            measuredValueZoneEM = mvz;
-            measuredValueZoneEM = mvz;
+          
         }
 
         public String Name { get => name; set => name = value; }

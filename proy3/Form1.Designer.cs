@@ -33,6 +33,9 @@
             this.zoomInBt = new System.Windows.Forms.Button();
             this.loadDataBt = new System.Windows.Forms.Button();
             this.locateZonesBt = new System.Windows.Forms.Button();
+            this.locateAllOpc = new System.Windows.Forms.RadioButton();
+            this.locateByCityOpc = new System.Windows.Forms.RadioButton();
+            this.infoBt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map
@@ -57,14 +60,14 @@
             this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.map.ShowTileGridLines = false;
-            this.map.Size = new System.Drawing.Size(582, 475);
+            this.map.Size = new System.Drawing.Size(566, 475);
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
             this.map.Load += new System.EventHandler(this.Map_Load);
             // 
             // zoomOutBt
             // 
-            this.zoomOutBt.Location = new System.Drawing.Point(636, 485);
+            this.zoomOutBt.Location = new System.Drawing.Point(649, 485);
             this.zoomOutBt.Name = "zoomOutBt";
             this.zoomOutBt.Size = new System.Drawing.Size(66, 50);
             this.zoomOutBt.TabIndex = 1;
@@ -74,7 +77,7 @@
             // 
             // zoomInBt
             // 
-            this.zoomInBt.Location = new System.Drawing.Point(708, 485);
+            this.zoomInBt.Location = new System.Drawing.Point(736, 485);
             this.zoomInBt.Name = "zoomInBt";
             this.zoomInBt.Size = new System.Drawing.Size(65, 50);
             this.zoomInBt.TabIndex = 2;
@@ -84,7 +87,7 @@
             // 
             // loadDataBt
             // 
-            this.loadDataBt.Location = new System.Drawing.Point(26, 12);
+            this.loadDataBt.Location = new System.Drawing.Point(404, 12);
             this.loadDataBt.Name = "loadDataBt";
             this.loadDataBt.Size = new System.Drawing.Size(188, 39);
             this.loadDataBt.TabIndex = 3;
@@ -94,7 +97,7 @@
             // 
             // locateZonesBt
             // 
-            this.locateZonesBt.Location = new System.Drawing.Point(647, 405);
+            this.locateZonesBt.Location = new System.Drawing.Point(672, 416);
             this.locateZonesBt.Name = "locateZonesBt";
             this.locateZonesBt.Size = new System.Drawing.Size(115, 44);
             this.locateZonesBt.TabIndex = 4;
@@ -102,11 +105,47 @@
             this.locateZonesBt.UseVisualStyleBackColor = true;
             this.locateZonesBt.Click += new System.EventHandler(this.LocateZonesBt_Click);
             // 
+            // locateAllOpc
+            // 
+            this.locateAllOpc.AutoSize = true;
+            this.locateAllOpc.Location = new System.Drawing.Point(672, 97);
+            this.locateAllOpc.Name = "locateAllOpc";
+            this.locateAllOpc.Size = new System.Drawing.Size(90, 21);
+            this.locateAllOpc.TabIndex = 5;
+            this.locateAllOpc.Text = "Locate all";
+            this.locateAllOpc.UseVisualStyleBackColor = true;
+            this.locateAllOpc.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            // 
+            // locateByCityOpc
+            // 
+            this.locateByCityOpc.AutoSize = true;
+            this.locateByCityOpc.Location = new System.Drawing.Point(672, 139);
+            this.locateByCityOpc.Name = "locateByCityOpc";
+            this.locateByCityOpc.Size = new System.Drawing.Size(111, 21);
+            this.locateByCityOpc.TabIndex = 6;
+            this.locateByCityOpc.TabStop = true;
+            this.locateByCityOpc.Text = "locate by city";
+            this.locateByCityOpc.UseVisualStyleBackColor = true;
+            // 
+            // infoBt
+            // 
+            this.infoBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.infoBt.Location = new System.Drawing.Point(598, 18);
+            this.infoBt.Name = "infoBt";
+            this.infoBt.Size = new System.Drawing.Size(23, 27);
+            this.infoBt.TabIndex = 7;
+            this.infoBt.Text = "?";
+            this.infoBt.UseVisualStyleBackColor = true;
+            this.infoBt.Click += new System.EventHandler(this.InfoBt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 547);
+            this.ClientSize = new System.Drawing.Size(853, 547);
+            this.Controls.Add(this.infoBt);
+            this.Controls.Add(this.locateByCityOpc);
+            this.Controls.Add(this.locateAllOpc);
             this.Controls.Add(this.locateZonesBt);
             this.Controls.Add(this.loadDataBt);
             this.Controls.Add(this.zoomInBt);
@@ -116,6 +155,7 @@
             this.Text = "MapZEM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,6 +166,9 @@
         private System.Windows.Forms.Button zoomInBt;
         private System.Windows.Forms.Button loadDataBt;
         private System.Windows.Forms.Button locateZonesBt;
+        private System.Windows.Forms.RadioButton locateAllOpc;
+        private System.Windows.Forms.RadioButton locateByCityOpc;
+        private System.Windows.Forms.Button infoBt;
     }
 }
 

@@ -38,6 +38,7 @@ namespace proy3
             {
                 path = openFile.FileName;
                 mc.loadData(path);
+                setEnableLocateTools(true);
             }
         }
 
@@ -53,9 +54,17 @@ namespace proy3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            setEnableLocateTools(false);
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+        }
+
+        private void setEnableLocateTools(Boolean b)
+        {
+            locateAllOpc.Enabled = b;
+            locateByCityOpc.Enabled = b;
+            locateZonesBt.Enabled = b;
         }
 
         private void LocateZonesBt_Click(object sender, EventArgs e)
@@ -73,6 +82,16 @@ namespace proy3
                 map.Overlays.Add(markOv);
                // Console.WriteLine(aux.Name + " ");
             }
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InfoBt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have to load data to enable the options below", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
