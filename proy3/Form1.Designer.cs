@@ -36,6 +36,7 @@
             this.locateAllOpc = new System.Windows.Forms.RadioButton();
             this.locateByCityOpc = new System.Windows.Forms.RadioButton();
             this.infoBt = new System.Windows.Forms.Button();
+            this.cityCb = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // map
@@ -97,7 +98,7 @@
             // 
             // locateZonesBt
             // 
-            this.locateZonesBt.Location = new System.Drawing.Point(672, 416);
+            this.locateZonesBt.Location = new System.Drawing.Point(672, 371);
             this.locateZonesBt.Name = "locateZonesBt";
             this.locateZonesBt.Size = new System.Drawing.Size(115, 44);
             this.locateZonesBt.TabIndex = 4;
@@ -138,11 +139,21 @@
             this.infoBt.UseVisualStyleBackColor = true;
             this.infoBt.Click += new System.EventHandler(this.InfoBt_Click);
             // 
+            // cityCb
+            // 
+            this.cityCb.FormattingEnabled = true;
+            this.cityCb.Location = new System.Drawing.Point(640, 275);
+            this.cityCb.Name = "cityCb";
+            this.cityCb.Size = new System.Drawing.Size(175, 24);
+            this.cityCb.TabIndex = 8;
+            this.cityCb.Text = "+";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 547);
+            this.Controls.Add(this.cityCb);
             this.Controls.Add(this.infoBt);
             this.Controls.Add(this.locateByCityOpc);
             this.Controls.Add(this.locateAllOpc);
@@ -169,6 +180,7 @@
         private System.Windows.Forms.RadioButton locateAllOpc;
         private System.Windows.Forms.RadioButton locateByCityOpc;
         private System.Windows.Forms.Button infoBt;
+        private System.Windows.Forms.ComboBox cityCb;
     }
 }
 

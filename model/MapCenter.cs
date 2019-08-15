@@ -18,6 +18,8 @@ namespace model
 
         public List<ZoneEM> Zones { get=>zones; set=>zones=value; }
 
+
+
         public void loadData(String l)
         {
             String link = l;
@@ -41,8 +43,8 @@ namespace model
                     double valueZ = Convert.ToDouble(coll[6]);
                     String city = coll[4];
 
-                    Console.WriteLine(coll.Length + "\n" + lat + " " + longit + " " + name + " " + valueZ);
-                    aux = new ZoneEM(name, lat, longit, valueZ);
+                    Console.WriteLine(coll.Length + "\n" + lat + " " + longit + " " + name + " "+city+" "+valueZ);
+                    aux = new ZoneEM(name, city,lat, longit, valueZ);
                     zones.Add(aux);
                    
                     line = read.ReadLine();
